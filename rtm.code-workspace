@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "Library for Remember The Milk",
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false,
+		"files.insertFinalNewline": true,
+		"files.trimFinalNewlines": true,
+		"lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+	},
+	"extensions": {
+		"recommendations": [
+			"mosapride.zenkaku",
+			"vadimcn.vscode-lldb",
+		]
+	}
+}
