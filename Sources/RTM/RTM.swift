@@ -10,7 +10,7 @@ extension Data {
 	}
 }
 
-public protocol Method {
+public protocol RtmMethod {
 	var rawValue: String { get }
 }
 
@@ -24,7 +24,7 @@ public struct RTM {
 	}
 
 	public enum Methods {
-		public enum Auth: Method {
+		public enum Auth: RtmMethod {
 			case checkToken, getFrob, getToken
 
 			public var rawValue: String {
@@ -36,7 +36,7 @@ public struct RTM {
 			}
 		}
 
-		public enum Tasks: Method {
+		public enum Tasks: RtmMethod {
 			case getList
 
 			public var rawValue: String {
@@ -77,7 +77,7 @@ public struct RTM {
 		}
     }
 
-	public func getUrl(method: Method, _ _params: Dictionary<String, String> = [:]) -> URL {
+	public func getUrl(method: RtmMethod, _ _params: Dictionary<String, String> = [:]) -> URL {
 		var params: Dictionary<String, String> = ["method": method.rawValue]
 
 		if (0 < self.authToken.count) {
