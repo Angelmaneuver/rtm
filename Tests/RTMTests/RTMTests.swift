@@ -3,16 +3,16 @@ import XCTest
 
 final class RTMTests: XCTestCase {
 	func testEnum() {
-        XCTAssertEqual(RTM.Permission.read.rawValue,         "read")
-        XCTAssertEqual(RTM.Permission.write.rawValue,        "write")
-        XCTAssertEqual(RTM.Permission.delete.rawValue,       "delete")
-        XCTAssertEqual(RTM.Format.xml.rawValue,              "xml")
-        XCTAssertEqual(RTM.Format.json.rawValue,             "json")
-        XCTAssertEqual(RTM.Methods.Auth.checkToken.rawValue, "rtm.auth.checkToken")
-        XCTAssertEqual(RTM.Methods.Auth.getFrob.rawValue,    "rtm.auth.getFrob")
-        XCTAssertEqual(RTM.Methods.Auth.getToken.rawValue,   "rtm.auth.getToken")
-        XCTAssertEqual(RTM.Methods.Tasks.getList.rawValue,   "rtm.tasks.getList")
-	}
+		XCTAssertEqual(RTM.Permission.read.rawValue,         "read")
+		XCTAssertEqual(RTM.Permission.write.rawValue,        "write")
+		XCTAssertEqual(RTM.Permission.delete.rawValue,       "delete")
+		XCTAssertEqual(RTM.Format.xml.rawValue,              "xml")
+		XCTAssertEqual(RTM.Format.json.rawValue,             "json")
+		XCTAssertEqual(RTM.Methods.Auth.checkToken.rawValue, "rtm.auth.checkToken")
+		XCTAssertEqual(RTM.Methods.Auth.getFrob.rawValue,    "rtm.auth.getFrob")
+		XCTAssertEqual(RTM.Methods.Auth.getToken.rawValue,   "rtm.auth.getToken")
+		XCTAssertEqual(RTM.Methods.Tasks.getList.rawValue,   "rtm.tasks.getList")
+}
 
 	func testInit() {
 		XCTAssertThrowsError(try RTM(appKey: "", appSecret: "")) { (error) in
