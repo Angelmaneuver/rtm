@@ -61,7 +61,7 @@ public struct RTM {
 
 	public  var authToken:  String
 
-    public init(appKey: String, appSecret: String, authToken: String = "", permission: Permission = Permission.read, format: Format = Format.json) throws {
+	public init(appKey: String, appSecret: String, authToken: String = "", permission: Permission = Permission.read, format: Format = Format.json) throws {
 		self.appKey     = appKey
 		self.appSecret  = appSecret
 		self.authToken  = authToken
@@ -75,7 +75,7 @@ public struct RTM {
 		} else if (0 == self.appSecret.count) {
 			throw RTM.invalidError.appSecret
 		}
-    }
+	}
 
 	public func getUrl(method: RtmMethod, _ _params: Dictionary<String, String> = [:]) -> URL {
 		var params: Dictionary<String, String> = ["method": method.rawValue]
