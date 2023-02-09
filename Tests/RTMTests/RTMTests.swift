@@ -12,7 +12,7 @@ final class RTMTests: XCTestCase {
 		XCTAssertEqual(RTM.Methods.Auth.getFrob.rawValue,    "rtm.auth.getFrob")
 		XCTAssertEqual(RTM.Methods.Auth.getToken.rawValue,   "rtm.auth.getToken")
 		XCTAssertEqual(RTM.Methods.Tasks.getList.rawValue,   "rtm.tasks.getList")
-}
+	}
 
 	func testInit() {
 		XCTAssertThrowsError(try RTM(appKey: "", appSecret: "")) { (error) in
